@@ -1,0 +1,76 @@
+.loaderoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #337ab7;
+  z-index: 1;
+}
+
+.loaderoverlay .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loaderoverlay .loader #spinner {
+  box-sizing: border-box;
+  stroke: white;
+  stroke-width: 3px;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+          animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+}
+
+table {
+  font-size: 1rem;
+  text-align: center;
+}
+
+td input {
+  width: 100%;
+}
+
+td input.lengthColumn {
+  width: calc(100% - 2rem);
+}
+
+.profileform input {
+  height: 2rem;
+  display: inline-block;
+}
+
+.profileform p {
+  padding: 0;
+  margin: 0;
+}
+
+.customer-info {
+  display: block;
+}
+
+.ng-table-pager {
+  display: none;
+}
+
+.inputtext {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  cursor: auto;
+}
+
+.displayTotals {
+  margin-top: 4rem;
+}
+
+/*# sourceMappingURL=main.css.map */

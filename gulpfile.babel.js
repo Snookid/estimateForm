@@ -70,6 +70,8 @@ gulp.task('serve:dist', () => {
   });
 });
 
+gulp.task('build', ['html', 'styles', 'scripts']);
+
 gulp.task('serve', ['html', 'styles', 'scripts'], () => {
 	// gulp.task('serve:dist');
 	browserSync({

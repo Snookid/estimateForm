@@ -6,7 +6,7 @@
 		"thickness": "1",
 		"feed width": "207",
 		"wtPerM": "1.91",
-		"pricePerM": "95.50"	
+		"pricePerM": "95.50"
 	},
 	{
 		"section": "LC 100x44x13",
@@ -15,7 +15,7 @@
 		"thickness": "1.2",
 		"feed width": "205.6",
 		"wtPerM": "2.3",
-		"pricePerM": "115.00"	
+		"pricePerM": "115.00"
 	},{
 		"section": "LC 100x44x13",
 		"value": "LC 100x44x13x1.5mm",
@@ -23,7 +23,7 @@
 		"thickness": "1.5",
 		"feed width": "203.5",
 		"wtPerM": "2.39",
-		"pricePerM": "119.50"	
+		"pricePerM": "119.50"
 	},{
 		"section": "LC 100x44x13",
 		"value": "LC 100x44x13x2mm",
@@ -31,7 +31,7 @@
 		"thickness": "2",
 		"feed width": "200",
 		"wtPerM": "3.19",
-		"pricePerM": "159.50"	
+		"pricePerM": "159.50"
 	},{
 		"section": "LC 100x50x12",
 		"value": "LC 100x50x12x1mm",
@@ -39,7 +39,7 @@
 		"thickness": "1",
 		"feed width": "217",
 		"wtPerM": "1.91",
-		"pricePerM": "95.50"	
+		"pricePerM": "95.50"
 	},{
 		"section": "LC 100x50x12",
 		"value": "LC 100x50x12x2mm",
@@ -47,7 +47,7 @@
 		"thickness": "2",
 		"feed width": "210",
 		"wtPerM": "3.83",
-		"pricePerM": "191.50"	
+		"pricePerM": "191.50"
 	},{
 		"section": "LC 100x50x13",
 		"value": "LC 100x50x13x1.2mm",
@@ -55,7 +55,7 @@
 		"thickness": "1.2",
 		"feed width": "217.6",
 		"wtPerM": "2.3",
-		"pricePerM": "115.00"	
+		"pricePerM": "115.00"
 	},{
 		"section": "LC 100x50x13",
 		"value": "LC 100x50x13x1.5mm",
@@ -63,7 +63,7 @@
 		"thickness": "1.5",
 		"feed width": "215.5",
 		"wtPerM": "2.87",
-		"pricePerM": "143.50"	
+		"pricePerM": "143.50"
 	},{
 		"section": "LC 100x50x18",
 		"value": "LC 100x50x18x2mm",
@@ -71,7 +71,7 @@
 		"thickness": "2",
 		"feed width": "222",
 		"wtPerM": "3.81",
-		"pricePerM": "190.50"	
+		"pricePerM": "190.50"
 	},{
 		"section": "LC 100x50x20",
 		"value": "LC 100x50x20x2.5mm",
@@ -79,7 +79,7 @@
 		"thickness": "2.5",
 		"feed width": "222.5",
 		"wtPerM": "4.78",
-		"pricePerM": "239.00"	
+		"pricePerM": "239.00"
 	},{
 		"section": "LC 100x50x20",
 		"value": "LC 100x50x20x3mm",
@@ -87,62 +87,62 @@
 		"thickness": "3",
 		"feed width": "219",
 		"wtPerM": "5.53",
-		"pricePerM": "276.50"	
+		"pricePerM": "276.50"
 	},{
-		"section": "LC 127x44x13",
+		"section": "LC 200x49x13",
 		"value": "LC 127x44x13x1.5mm",
 		"group": "LC 200 (8\")",
 		"thickness": "1.5",
 		"feed width": "313.5",
 		"wtPerM": "3.83",
-		"pricePerM": "191.50"	
+		"pricePerM": "191.50"
 	},{
-		"section": "LC 127x44x13",
+		"section": "LC 200x49x13",
 		"value": "LC 127x44x13x2mm",
 		"group": "LC 200 (8\")",
 		"thickness": "2",
 		"feed width": "310",
 		"wtPerM": "6.38",
-		"pricePerM": "319.00"	
+		"pricePerM": "319.00"
 	},{
-		"section": "LC 127x44x14",
+		"section": "LC 200x49x14",
 		"value": "LC 127x44x14x2.4mm",
 		"group": "LC 200 (8\")",
 		"thickness": "2.4",
 		"feed width": "309.2",
 		"wtPerM": "7.65",
-		"pricePerM": "382.50"	
+		"pricePerM": "382.50"
 	},{
-		"section": "LC 127x44x18",
+		"section": "LC 200x75x18",
 		"value": "LC 127x44x18x1.5mm",
 		"group": "LC 200 (8\")",
 		"thickness": "1.5",
 		"feed width": "375.5",
 		"wtPerM": "4.78",
-		"pricePerM": "239.00"	
+		"pricePerM": "239.00"
 	},{
-		"section": "LC 127x44x18",
+		"section": "LC 200x75x18",
 		"value": "LC 127x44x18x2mm",
 		"group": "LC 200 (8\")",
 		"thickness": "2",
 		"feed width": "372",
 		"wtPerM": "6.38",
-		"pricePerM": "319.00"	
+		"pricePerM": "319.00"
 	},{
-		"section": "LC 127x44x20",
+		"section": "LC 200x75x20",
 		"value": "LC 127x44x20x2.5mm",
 		"group": "LC 200 (8\")",
 		"thickness": "2.5",
 		"feed width": "368.5",
 		"wtPerM": "7.97",
-		"pricePerM": "398.50"	
+		"pricePerM": "398.50"
 	},{
-		"section": "LC 127x44x20",
+		"section": "LC 200x75x20",
 		"value": "LC 127x44x20x3mm",
 		"group": "LC 200 (8\")",
 		"thickness": "3",
 		"feed width": "369",
 		"wtPerM": "9.57",
-		"pricePerM": "478.50"	
+		"pricePerM": "478.50"
 	}
 ]

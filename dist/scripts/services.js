@@ -22,40 +22,34 @@ function totalsFn() {
 
 	this.masterArr = [];
 
-	this.totalWt = 0;
-	this.matlCost = 0;
-	this.laborCost = 0;
-	this.totalCost = 0;
-	// this.wtPerPc = 0;
-	this.lmtrs = 0;
+	var calculateTotal = function calculateTotal(what) {
+		return _this.masterArr.reduce(function (a, b) {
+			return a + b[what];
+		}, 0);
+	};
+	this.calculateTotals = function () {
+		_this.totalWt = calculateTotal('totalWt');
+		_this.matlCost = calculateTotal('matlCost');
+		_this.laborCost = calculateTotal('laborCost');
+		_this.totalCost = calculateTotal('totalCost');
+		_this.lmtrs = calculateTotal('lmtrs');
+		return { totalWt: _this.totalWt, matlCost: _this.matlCost, laborCost: _this.laborCost, totalCost: _this.totalCost, lmtrs: _this.lmtrs };
+	};
+
 	this.collateThisComponent = function (obj) {
-		_this.totalWt += math.round(obj.totalWt, 4);
-		_this.matlCost += math.round(obj.matlCost, 4);
-		_this.laborCost += math.round(obj.laborCost, 4);
-		_this.totalCost += math.round(obj.totalCost, 4);
-		if (obj.lmtrs) _this.lmtrs += math.round(obj.lmtrs, 4);
-		_this.masterArr.push(obj);
-
-		console.log(_this.masterArr);
-
-		return { totalWt: _this.totalWt, matlCost: _this.matlCost, laborCost: _this.laborCost, totalCost: _this.totalCost, lmtrs: _this.lmtrs };
+		if (_this.masterArr.find(function (item) {
+			return item.id === obj.id;
+		})) _this.masterArr[_this.masterArr.findIndex(function (item) {
+			return item.id === obj.id;
+		})] = obj;else _this.masterArr.push(obj);
+		return _this.calculateTotals();
 	};
+
 	this.removeThisComponent = function (obj) {
-		_this.totalWt -= math.round(obj.totalWt, 4);
-		_this.matlCost -= math.round(obj.matlCost, 4);
-		_this.laborCost -= math.round(obj.laborCost, 4);
-		_this.totalCost -= math.round(obj.totalCost, 4);
-		if (obj.lmtrs) _this.lmtrs -= math.round(obj.lmtrs, 4);
-		_.remove(_this.masterArr, function (item) {
-			return obj.id === item.id;
-		});
-
-		console.log(_this.masterArr);
-
-		return { totalWt: _this.totalWt, matlCost: _this.matlCost, laborCost: _this.laborCost, totalCost: _this.totalCost, lmtrs: _this.lmtrs };
-	};
-	this.getTotal = function () {
-		return { totalWt: _this.totalWt, matlCost: _this.matlCost, laborCost: _this.laborCost, totalCost: _this.totalCost, lmtrs: _this.lmtrs };
+		_this.masterArr.splice(_this.masterArr.findIndex(function (item) {
+			return item.id === obj.id;
+		}), 1);
+		return _this.calculateTotals();
 	};
 }
 

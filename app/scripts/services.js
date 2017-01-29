@@ -16,40 +16,25 @@ function httpFn($http){
 function totalsFn(){
 	this.masterArr = [];
 
-	this.totalWt = 0;
-	this.matlCost = 0;
-	this.laborCost = 0; 
-	this.totalCost = 0;
-	// this.wtPerPc = 0;
-	this.lmtrs = 0;
+	let calculateTotal = (what) => this.masterArr.reduce((a, b) => a+b[what], 0);
+	this.calculateTotals = () => {
+		this.totalWt = calculateTotal('totalWt');
+		this.matlCost = calculateTotal('matlCost');
+		this.laborCost = calculateTotal('laborCost');
+		this.totalCost = calculateTotal('totalCost');
+		this.lmtrs = calculateTotal('lmtrs');
+		return {totalWt: this.totalWt, matlCost: this.matlCost, laborCost: this.laborCost, totalCost: this.totalCost, lmtrs: this.lmtrs};
+	};
+
 	this.collateThisComponent = (obj) => {
-		this.totalWt += math.round(obj.totalWt, 4);
-		this.matlCost += math.round(obj.matlCost, 4);
-		this.laborCost += math.round(obj.laborCost, 4);
-		this.totalCost += math.round(obj.totalCost, 4);
-		if(obj.lmtrs) this.lmtrs += math.round(obj.lmtrs, 4);
-		this.masterArr.push(obj);
-
-		console.log(this.masterArr);
-
-		return {totalWt: this.totalWt, matlCost: this.matlCost, laborCost: this.laborCost, totalCost: this.totalCost, lmtrs: this.lmtrs};
+		if(this.masterArr.find(item=>item.id===obj.id)) this.masterArr[this.masterArr.findIndex(item=>item.id===obj.id)] = obj;
+			else this.masterArr.push(obj);
+		return this.calculateTotals();
 	};
+
 	this.removeThisComponent = (obj) => {
-		this.totalWt -= math.round(obj.totalWt, 4);
-		this.matlCost -= math.round(obj.matlCost, 4);
-		this.laborCost -= math.round(obj.laborCost, 4);
-		this.totalCost -= math.round(obj.totalCost, 4);
-		if(obj.lmtrs) this.lmtrs -= math.round(obj.lmtrs, 4);
-		_.remove(this.masterArr, (item) => {
-			return obj.id===item.id;
-		});
-
-		console.log(this.masterArr);
-
-		return {totalWt: this.totalWt, matlCost: this.matlCost, laborCost: this.laborCost, totalCost: this.totalCost, lmtrs: this.lmtrs};
-	};
-	this.getTotal = () => { 
-		return {totalWt: this.totalWt, matlCost: this.matlCost, laborCost: this.laborCost, totalCost: this.totalCost, lmtrs: this.lmtrs};
+		this.masterArr.splice(this.masterArr.findIndex(item=>item.id===obj.id), 1);
+		return this.calculateTotals();
 	};
 }
 
